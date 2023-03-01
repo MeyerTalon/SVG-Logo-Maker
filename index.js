@@ -16,7 +16,7 @@ const writeSVGFile = (data) => {
         myShape = new Triangle(data.color, data.text, data.textColor)
     }
 
-    fs.writeFile('logo.svg', myShape.render(), (err) => {
+    fs.writeFile('./dist/logo.svg', myShape.render(), (err) => {
         if (err) {
             console.log(err);
         } else {
