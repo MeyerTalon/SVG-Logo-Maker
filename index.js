@@ -4,15 +4,16 @@ const Circle = require('./lib/circle.js');
 const Square = require('./lib/square.js');
 const Triangle = require('./lib/triangle.js');
 
-
 const writeSVGFile = (data) => {
 
+    let myShape;
+
     if (data.shape === 'Circle') {
-        const myShape = new Circle(data.color, data.text, data.textColor);
+        myShape = new Circle(data.color, data.text, data.textColor);
     } else if (data.shape === 'Square') {
-        const myShape = new Square(data.color, data.text, data.textColor);
+        myShape = new Square(data.color, data.text, data.textColor);
     } else {
-        const myShape = new Triangle(data.color, data.text, data.textColor)
+        myShape = new Triangle(data.color, data.text, data.textColor)
     }
 
     fs.writeFile('logo.svg', myShape.render(), (err) => {
