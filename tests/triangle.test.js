@@ -1,5 +1,6 @@
 const Triangle = require('../lib/triangle.js');
 
+// Tests the Triangle class's render() method
 describe('Triangle', () => {
   test('should render triangle with given params', () => {
     const expectedSVG = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
